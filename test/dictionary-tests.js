@@ -8,6 +8,13 @@ const goodWords = [
     "photograph",
     "zygotes",
     "Texas"
+]
+    const lowerCase =[
+        "zulu",
+        "cheese",
+        "grommit",
+        "garfield",
+        "jordan"
 ];
 
 //A list of words we SHOULD NOT find
@@ -35,5 +42,13 @@ describe("Dictionary Functional Tests:", function () {
         });
     }
 
-});
+    for (const word of lowerCase) {
+        it(`Finds words that are lower case in the dictionary ${word}`, function () {
+            assert.ok(search(word));
+        });
+    }
 
+
+
+
+});
