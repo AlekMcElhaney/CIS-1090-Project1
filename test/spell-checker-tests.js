@@ -30,8 +30,13 @@ describe("SpellCheck tests", function () {
         it("Reports that Pikachu is misspelled", function () {
             assert.ok(!isSpelledRight("Pikachu"));
         });
-
+        it("Reports that oliver is spelled right", function() {
     });
+
+});
+       
+
+       }); 
 
     describe("Spell Check add words Tests", function () {
         it("Finds the word samsquanch after adding it", function () {
@@ -41,4 +46,10 @@ describe("SpellCheck tests", function () {
         });
     });
 
-});
+    
+    describe("Spell Check notify when word is not in dictionary", function () {
+         it("differentiates between misspelled words and words not in the dictionary", function () {})
+         assert.ok(!isIncorrectlySpelled("allwords")); //Lets users know the word is misspelled
+         assert.ok(isMissing("allwords")); // tells users that the word is missing from the dictionary
+    });
+    
