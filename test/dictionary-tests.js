@@ -9,13 +9,15 @@ const goodWords = [
     "zygotes",
     "Texas"
 ]
+
+//added new set of words for the spellchecker to find. All begin with lowercase.
     const lowerCase =[
         "zulu",
         "cheese",
         "grommit",
         "garfield",
         "jordan"
-];
+]
 
 //A list of words we SHOULD NOT find
 const badWords = [
@@ -41,7 +43,7 @@ describe("Dictionary Functional Tests:", function () {
             assert.ok(!search(word));
         });
     }
-
+//this is to search for those words
     for (const word of lowerCase) {
         it(`Finds words that are lower case in the dictionary ${word}`, function () {
             assert.ok(search(word));
